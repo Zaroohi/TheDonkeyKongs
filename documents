@@ -27,3 +27,33 @@ void loop() {
   digitalWrite(IN2, LOW);
   delay(2000);
 }
+
+
+// Arduino code for Motor two
+// test 
+
+
+const int IN3 = 14;
+const int IN4 = 25;
+const int ENB = 33;
+
+void setup() {
+  pinMode(IN3, OUTPUT);
+  pinMode(IN4, OUTPUT);
+  pinMode(ENB, OUTPUT);
+
+  // Enable Motor 2
+  digitalWrite(ENB, HIGH);
+}
+
+void loop() {
+  // Motor 2 spins
+  digitalWrite(IN3, HIGH);
+  digitalWrite(IN4, LOW);
+  delay(2000);
+
+  // Motor 2 stops
+  digitalWrite(IN3, LOW);
+  digitalWrite(IN4, LOW);
+  delay(2000);
+}
